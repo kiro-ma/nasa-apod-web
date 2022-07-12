@@ -1,0 +1,1 @@
+document.getElementById("main-image").src = "https://stsci-opo.org/STScI-01G77PKYA4T05YKJ3EDQ36NZCX.png"
