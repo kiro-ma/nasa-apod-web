@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>NASA's Astronomy Picture of the Day</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
 
     <main class="container">
-      <h1>NASA's Astronomy Picture of the Day</h1>
-      <h2 id="title"></h2>
-      <h3 id="date"></h3>
-      <input type="date" id="date-picker" name="current-date">
-      <section class="picture-explanation-container">
-        <img src="" id="picture" alt="astronomy image by NASA" />
-        <p id="explanation"></p>
-      </section>
+        <h1>NASA's Astronomy Picture of the Day</h1>
+        <h2 id="title"></h2>
+        <h3 id="date"></h3>
+        <input type="date" id="date-picker" name="current-date">
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <img src="" id="picture" alt="astronomy image by NASA" />
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <p id="explanation"></p>
+            </div>
+        </div>
+
     </main>
 
     <script type="text/javascript" src="./scripts/config.js"></script>
     <script src="./scripts/app.js"></script>
-  </body>
+</body>
+
 </html>
