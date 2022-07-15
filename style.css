@@ -1,36 +1,37 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-  }
-  
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .picture-explanation-container {
-    display: flex;
-  }
-  
-  #picture {
-    width: 100%;
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
-  
-  #explanation {
-    letter-spacing: 0px;
-    line-height: 20px;
-    margin-top: 1rem;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
 
-  /* The alert message box */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.picture-explanation-container {
+  display: flex;
+}
+
+#picture {
+  width: 100%;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+#explanation {
+  letter-spacing: 0px;
+  line-height: 20px;
+  margin-top: 1rem;
+}
+
+/* The alert message box */
 .alert {
   display: none;
   padding: 20px;
-  background-color: #f44336; /* Red */
+  background-color: #f44336;
+  /* Red */
   color: white;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -67,4 +68,40 @@ img.loading {
   backdrop-filter: blur(8px);
   border-right: 1px solid whitesmoke;
   height: 100vh;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  background-color: transparent;
+  top: 65%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  padding: auto;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: auto;
+  cursor: pointer;
+}
+
+.container .btn:hover {
+  color: black;
+  background-color: white;
+  opacity: 25%;
 }
