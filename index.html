@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <style id="background">
-    </style>
+    <style id="background"></style>
     <main class="container">
         <div class="alert" id="invalid-date">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -33,9 +32,12 @@
                 <input type="date" id="date-picker" name="current-date" onchange="handler(event);">
                 <p class="card-text" id="explanation"></p>
             </div>
+            <div class="footerContainer">
+                <p class="copyright" id="copyright"></p>
+            </div>
         </div>
     </main>
-
+    
     <script type="text/javascript" src="./scripts/config.js"></script>
     <script src="./scripts/app.js"></script>
 </body>

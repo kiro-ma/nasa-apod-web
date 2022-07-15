@@ -58,18 +58,6 @@ img.loading {
   background: transparent url("./imgs/saturn.gif") no-repeat scroll center center;
 }
 
-.background {
-  background-image: url("...");
-}
-
-.blur {
-  animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-right: 1px solid whitesmoke;
-  height: 100vh;
-}
-
 /* Container needed to position the button. Adjust the width as needed */
 .container {
   position: relative;
@@ -85,12 +73,13 @@ img.loading {
 /* Style the button and place it in the middle of the container/image */
 .container .btn {
   position: absolute;
-  background-color: transparent;
+  color: white;
+  background-color: black;
+  opacity: 50%;
   top: 65%;
   left: 95%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  color: white;
   font-size: 30px;
   padding: auto;
   cursor: pointer;
@@ -104,4 +93,16 @@ img.loading {
   color: black;
   background-color: white;
   opacity: 25%;
+}
+
+footer.footer {
+  height: 300px;
+  width: 100%;
+  background-color: #333333;
+}
+
+p.copyright {
+  color: rgb(0, 0, 0);
+  line-height: 40px;
+  font-size: 1em;
 }

@@ -34,14 +34,16 @@ const displayData = data => {
         background-attachment: fixed;
         background-size: cover;
 
-        height: 100vh;
+        height: 100%;
         width: 100%;
         animation: changeWidth 8s ease-in-out infinite;
         backdrop-filter: blur(8px);
-        border-right: 1px solid whitesmoke;
-        height: 100vh;
     }
     `
+    if (data.copyright != undefined) {
+        document.getElementById('copyright').innerText = "© " + data.copyright
+
+    }
 }
 
 const fullScreen = (id) => {
@@ -50,7 +52,7 @@ const fullScreen = (id) => {
 
 function handler(e) {
     var date = e.target.value;
-    if (date < today) { fetchNASAData(date); }
+    if (date <= today) { fetchNASAData(date); }
     else {
         document.getElementById('invalid-date').innerHTML += 'Invalid date chosen!'
         document.getElementById('invalid-date').style.display = 'block'
