@@ -61,9 +61,15 @@ function handler(e) {
     }
 }
 
+const translate = () => {
+    var userLang = navigator.language || navigator.userLanguage;
+    alert("The language is: " + userLang);
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, userLang);
+}
 
 window.onload = () => {
     document.getElementById('date-picker').value = today
     fetchNASAData(today);
+    translate()
     // console.log(today);
 }
