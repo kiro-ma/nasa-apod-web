@@ -42,8 +42,8 @@ const displayData = data => {
     `
     if (data.copyright != undefined) {
         document.getElementById('copyright').innerText = "© " + data.copyright
-
     }
+
 }
 
 const fullScreen = (id) => {

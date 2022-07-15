@@ -56,6 +56,7 @@
 
 img.loading {
   background: transparent url("./imgs/saturn.gif") no-repeat scroll center center;
+  background-size: 50%;
 }
 
 /* Container needed to position the button. Adjust the width as needed */
@@ -72,27 +73,7 @@ img.loading {
 
 /* Style the button and place it in the middle of the container/image */
 .container .btn {
-  position: absolute;
-  color: white;
-  background-color: black;
-  opacity: 50%;
-  top: 65%;
-  left: 95%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  font-size: 30px;
-  padding: auto;
   cursor: pointer;
-  border: none;
-  margin: 0;
-  padding: auto;
-  cursor: pointer;
-}
-
-.container .btn:hover {
-  color: black;
-  background-color: white;
-  opacity: 25%;
 }
 
 footer.footer {
