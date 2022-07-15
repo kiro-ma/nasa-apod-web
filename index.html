@@ -25,9 +25,10 @@
             <h1 style="margin-top: 15px;">NASA's Astronomy Picture of the Day</h1>
             <div class="card-img-top card-img">
                 <img src="" id="picture" class="loading btn" onclick="fullScreen('picture')">
+                <h1 style="font-size: small;">Click image to see in full screen</h1>
             </div>
             <div class="card-body">
-                <h2 id="title" style="margin-top: 10px; margin-bottom: 15px"></h2>
+                <h1 id="title" style="margin-top: 10px; margin-bottom: 15px"></h1>
                 <input type="date" id="date-picker" name="current-date" onchange="handler(event);">
                 <p class="card-text" id="explanation"></p>
             </div>
@@ -36,7 +37,7 @@
             </div>
         </div>
     </main>
-    
+
     <script type="text/javascript" src="./scripts/config.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
