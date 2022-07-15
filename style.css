@@ -23,5 +23,48 @@
   #explanation {
     letter-spacing: 0px;
     line-height: 20px;
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
+
+  /* The alert message box */
+.alert {
+  display: none;
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+img.loading {
+  background: transparent url("./imgs/saturn.gif") no-repeat scroll center center;
+}
+
+.background {
+  background-image: url("...");
+}
+
+.blur {
+  animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid whitesmoke;
+  height: 100vh;
+}

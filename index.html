@@ -10,25 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 </head>
 
 <body>
-
+    <style id="background">
+    </style>
     <main class="container">
-        <h1>NASA's Astronomy Picture of the Day</h1>
-        <h2 id="title"></h2>
-        <h3 id="date"></h3>
-        <input type="date" id="date-picker" name="current-date">
-        
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
-                <img src="" id="picture" alt="astronomy image by NASA" />
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <p id="explanation"></p>
-            </div>
+        <div class="alert" id="invalid-date">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         </div>
 
+        <div class="card mb-3" style="margin:0 auto; margin-top: 15px; margin-bottom: 15px;">
+            <h1 style="margin-top: 15px;">NASA's Astronomy Picture of the Day</h1>
+            <img src="" class="card-img-top" id="picture">
+            <div class="card-body">
+                <h2 id="title" style="margin-top: 10px; margin-bottom: 15px"></h2>
+                <input type="date" id="date-picker" name="current-date" onchange="handler(event);">
+                <p class="card-text" id="explanation"></p>
+            </div>
+        </div>
     </main>
 
     <script type="text/javascript" src="./scripts/config.js"></script>
