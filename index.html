@@ -22,6 +22,7 @@
         </div>
 
         <div class="card mb-3" style="margin:0 auto; margin-top: 15px; margin-bottom: 15px;">
+            <h2 id="google_translate_element" style="height: 40px; width: 40px; margin-left: 20px; margin-top: 10px"></h2>
             <h1 style="margin-top: 15px;">NASA's Astronomy Picture of the Day</h1>
             <div class="card-img-top card-img">
                 <img src="" id="picture" class="loading btn" onclick="fullScreen('picture')">
@@ -31,18 +32,19 @@
             <div class="card-body">
                 <h1 id="title" style="margin-top: 10px; margin-bottom: 15px"></h1>
                 <input type="date" id="date-picker" name="current-date" onchange="handler(event);">
-                <p class="card-text" id="explanation"></p>
+                <p class="card-text text-left" id="explanation" style="margin-left: 20px; margin-right: 20px;"></p>
             </div>
             <div class="footerContainer">
                 <p class="copyright" id="copyright"></p>
             </div>
+
+            <button href="https://github.com/kiro-ma" class="profile-link">github.com/kiro-ma</button>
+            
         </div>
     </main>
 
     <script type="text/javascript" src="./scripts/config.js"></script>
     <script src="./scripts/app.js"></script>
-
-    <div id="google_translate_element"></div>
 
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -55,7 +57,7 @@
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 autoDisplay: true,
-                includedLanguages: `${userLang}, en`,
+                includedLanguages: `${userLang}` + ',en,ja,es',
             }, 'google_translate_element');
             setTimeout(() => {
                 changeLangToSV();
@@ -63,7 +65,7 @@
         }
         function changeLangToSV() {
             let ele = document.querySelector("#google_translate_element select");
-            ele.selectedIndex = 1
+            ele.selectedIndex = 3
             ele.dispatchEvent(new Event("change"));
         }
     </script>
@@ -89,19 +91,6 @@
             background-color: transparent !important;
             border: none !important;
             box-shadow: none !important;
-        }
-    </style>
-
-    <style>
-        .skiptranslate,
-        #google_translate_element {
-            display: none;
-        }
-
-        body {
-            min-height: 0px !important;
-            position: static !important;
-            top: 0px !important;
         }
     </style>
 

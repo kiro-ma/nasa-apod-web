@@ -87,3 +87,21 @@ p.copyright {
   line-height: 40px;
   font-size: 1em;
 }
+
+.profile-link {
+  background: linear-gradient(to right,
+      rgb(0, 73, 107),
+      rgb(129, 35, 192));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  text-align: center;
+  font-size: 3vmin;
+  line-height: 1.1;
+  cursor: pointer;
+  margin: 0;
+  font-family: "Helvetica", ui-monospace, monospace;
+  padding: 0;
+  border: none;
+  margin-bottom: 10px;
+}

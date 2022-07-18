@@ -50,9 +50,6 @@ const fullScreen = (id) => {
     document.getElementById(id).requestFullscreen()
 }
 
-function handler2(e) {
-    console.log(e.target.value)
-}
 
 function handler(e) {
     var date = e.target.value;
