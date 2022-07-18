@@ -50,6 +50,10 @@ const fullScreen = (id) => {
     document.getElementById(id).requestFullscreen()
 }
 
+function handler2(e) {
+    console.log(e.target.value)
+}
+
 function handler(e) {
     var date = e.target.value;
     if (date <= today) { fetchNASAData(date); }
@@ -61,15 +65,9 @@ function handler(e) {
     }
 }
 
-const translate = () => {
-    var userLang = navigator.language || navigator.userLanguage;
-    alert("The language is: " + userLang);
-    new google.translate.TranslateElement({ pageLanguage: 'en' }, userLang);
-}
-
 window.onload = () => {
     document.getElementById('date-picker').value = today
     fetchNASAData(today);
-    translate()
+    //translate()
     // console.log(today);
 }
