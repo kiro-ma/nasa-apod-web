@@ -24,31 +24,20 @@ const fetchNASAData = async (date) => {
 
 const displayData = data => {
     document.getElementById('title').textContent = data.title;
+    video_player = document.getElementById('video')
+    image = document.getElementById('picture')
+
     if (data.media_type == "image") {
-        image = document.getElementById('picture')
+        video_player.style = 'display: none'
         image.style = 'display: block'
         image.src = data.hdurl;
     } else if (data.media_type == "video") {
-        video_player = document.getElementById('video')
         video_player.src = data.url
         image.style = 'display: none'
         video_player.style = 'display: block'
     }
     document.getElementById('explanation').textContent = data.explanation;
-    document.getElementById('background').innerHTML = `
-    body {
-        background-image: url(${data.url});
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-
-        height: 100%;
-        width: 100%;
-        animation: changeWidth 8s ease-in-out infinite;
-        backdrop-filter: blur(8px);
-    }
-    `
+    document.getElementById('background').style.setProperty('background-image', `url(${data.hdurl})`)
     if (data.copyright != undefined) {
         document.getElementById('copyright').innerText = "© " + data.copyright
     }
