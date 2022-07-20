@@ -24,7 +24,16 @@ const fetchNASAData = async (date) => {
 
 const displayData = data => {
     document.getElementById('title').textContent = data.title;
-    document.getElementById('picture').src = data.hdurl;
+    if (data.media_type == "image") {
+        image = document.getElementById('picture')
+        image.style = 'display: block'
+        image.src = data.hdurl;
+    } else if (data.media_type == "video") {
+        video_player = document.getElementById('video')
+        video_player.src = data.url
+        image.style = 'display: none'
+        video_player.style = 'display: block'
+    }
     document.getElementById('explanation').textContent = data.explanation;
     document.getElementById('background').innerHTML = `
     body {
@@ -46,10 +55,17 @@ const displayData = data => {
 
 }
 
+function handleKey(e) {
+    //key code for enter
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        e.target.blur();
+    }
+}
+
 const fullScreen = (id) => {
     document.getElementById(id).requestFullscreen()
 }
-
 
 function handler(e) {
     var date = e.target.value;
