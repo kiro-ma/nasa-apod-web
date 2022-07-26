@@ -29,15 +29,21 @@
                 <h1 style="margin-top: 15px;">NASA's Astronomy Picture of the Day</h1>
                 <div class="card-img-top card-img">
                     <img src="" id="picture" class="loading btn" onclick="fullScreen('picture')" style="display: block">
-                    <iframe id="video" width="720" height="480" src="" style="display: none" class="video-player">
-                    </iframe>
+                    <div class="embed-responsive embed-responsive-16by9" id="video-div" style="display: none">
+                        <iframe id="video" class="embed-responsive-item" src="" allowfullscreen></iframe>
+                    </div>
                     <h1 style="font-size: small;">Click image to see in full screen</h1>
                 </div>
 
                 <div class="card-body">
                     <h1 id="title" style="margin-top: 10px; margin-bottom: 15px"></h1>
-                    <input type="date" id="date-picker" name="current-date" min="1995-06-16"
-                        onblur="if(this.checkValidity) handler(event);" onkeypress="handleKey(event)">
+                    <form>
+                        <input type="date" id="date-picker" name="current-date" min="1995-06-16"
+                            onkeypress="handleKey(event)" />
+
+                        <button type="button"
+                            onclick="date_handler(document.getElementById('date-picker').value)">Ok</button>
+                    </form>
                     <p class="card-text text-left" id="explanation" style="margin-left: 20px; margin-right: 20px;"></p>
                 </div>
                 <div class="footerContainer">

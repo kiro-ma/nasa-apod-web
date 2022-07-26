@@ -24,20 +24,22 @@ const fetchNASAData = async (date) => {
 
 const displayData = data => {
     document.getElementById('title').textContent = data.title;
+    video_div = document.getElementById('video-div')
     video_player = document.getElementById('video')
     image = document.getElementById('picture')
 
     if (data.media_type == "image") {
-        video_player.style = 'display: none'
+        video_div.style = 'display: none'
         image.style = 'display: block'
         image.src = data.hdurl;
+        document.getElementById('background').style.setProperty('background-image', `url(${data.hdurl})`)
     } else if (data.media_type == "video") {
         video_player.src = data.url
         image.style = 'display: none'
-        video_player.style = 'display: block'
+        video_div.style = 'display: block'
+        document.getElementById('background').style.setProperty('background-image', `url("./imgs/carina.png")`)
     }
     document.getElementById('explanation').textContent = data.explanation;
-    document.getElementById('background').style.setProperty('background-image', `url(${data.hdurl})`)
     if (data.copyright != undefined) {
         document.getElementById('copyright').innerText = "© " + data.copyright
     }
@@ -48,7 +50,8 @@ function handleKey(e) {
     //key code for enter
     if (e.keyCode === 13) {
         e.preventDefault();
-        e.target.blur();
+        date = e.target.value;
+        date_handler(date)
     }
 }
 
@@ -56,8 +59,7 @@ const fullScreen = (id) => {
     document.getElementById(id).requestFullscreen()
 }
 
-function handler(e) {
-    var date = e.target.value;
+function date_handler(date) {
     if (date <= today) { fetchNASAData(date); }
     else {
         document.getElementById('invalid-date').innerHTML += 'Invalid date chosen!'
